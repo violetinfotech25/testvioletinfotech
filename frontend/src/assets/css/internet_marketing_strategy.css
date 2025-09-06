@@ -1,0 +1,136 @@
+/* Container */
+.ims-strategy-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Title */
+.ims-strategy-title {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #43937D;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.ims-strategy-subtitle {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Paragraph text */
+.ims-strategy-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Bullet points */
+.ims-strategy-points ul,
+.ims-strategy-highlight ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.ims-strategy-points li::before,
+.ims-strategy-highlight li::before {
+  content: "➤";
+  color: #982d57;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Highlight Section */
+.ims-strategy-highlight p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #43937D;
+  text-align: center;
+}
+
+/* Quote block */
+.ims-strategy-quote {
+  font-style: italic;
+  font-size: 18px;
+  background: #f1f3f7;
+  border-left: 4px solid #982d57;
+  padding: 20px 25px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  color: #444;
+}
+
+/* CTA section */
+.ims-strategy-cta {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.ims-strategy-cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* CTA Button */
+.ims-strategy-button {
+  background-color: #982d57;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(152, 45, 87, 0.2);
+}
+
+.ims-strategy-button:hover {
+  background-color: #d400ff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ims-strategy-title {
+    font-size: 32px;
+  }
+
+  .ims-strategy-subtitle {
+    font-size: 16px;
+  }
+
+  .ims-strategy-content p,
+  .ims-strategy-points ul,
+  .ims-strategy-highlight ul,
+  .ims-strategy-quote,
+  .ims-strategy-cta p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .ims-strategy-button {
+    width: 100%;
+    font-size: 15px;
+  }
+}

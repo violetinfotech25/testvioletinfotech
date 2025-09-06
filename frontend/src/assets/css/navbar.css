@@ -1,0 +1,138 @@
+/* Brand Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #43937D !important;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Navigation links */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Hover underline effect */
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: #c71c2c;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.navbar-nav .nav-link::after {
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #43937D;
+  border: none;
+  border-radius: 0 0 6px 6px;
+  min-width: 200px;
+  padding: 0;
+  z-index: 999;
+  font-size: 20px;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid #333;
+  color: #eee;
+  text-align: center;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: #c71c2c;
+  color: #fff;
+}
+
+/* Contact button inside navbar */
+.contact-btn {
+  background: #e91e63;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(233, 30, 99, 0.4);
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #e91e62cc;
+}
+
+/* Navbar toggler icon (hamburger) */
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(100);
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #43937D;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,294 @@
+/* General Page Styles */
+.branding-page {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Page Heading */
+.branding-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+  color: #43937D;
+  position: relative;
+  animation: slideDown 1s ease forwards;
+}
+
+/* Section Layout */
+.branding-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 30px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s ease;
+}
+.branding-section:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout Control */
+.branding-section.left .branding-image {
+  order: 1;
+}
+.branding-section.left .branding-content {
+  order: 2;
+}
+.branding-section.right .branding-image {
+  order: 2;
+}
+.branding-section.right .branding-content {
+  order: 1;
+}
+
+/* Image Styling + Animation */
+.branding-image {
+  flex: 1 1 45%;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.branding-image:hover {
+  transform: scale(1.05);
+}
+.branding-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Content Styling */
+.branding-content {
+  flex: 1 1 50%;
+  padding: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+.branding-content h2 {
+  font-size: 2rem;
+  color: #43937D;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.branding-detail {
+  margin-bottom: 20px;
+}
+.branding-detail h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+.branding-detail p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Button Styling with Animation */
+.branding-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #43937D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+.branding-btn:hover {
+  background: linear-gradient(45deg, #3b82f6, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .branding-section {
+    flex-direction: column;
+  }
+  .branding-image, .branding-content {
+    flex: 1 1 100%;
+  }
+  .branding-content {
+    padding: 0;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gallery Container after main branding-page */
+.branding-gallery-container {
+  width: 100%;
+  padding: 60px 5%;
+  background: #43937ed0;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+}
+.gallery-main-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Section Group */
+.gallery-group {
+  margin-bottom: 50px;
+}
+.gallery-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(255, 217, 0);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Gallery Grid */
+.branding-gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.branding-gallery img {
+  width: 220px;  /* Increased from 150px */
+  height: 150px; /* Increased from 100px */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.branding-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.gallery-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(255, 217, 0);
+  margin-top: 100px;
+}
+
+.section-gap {
+  margin-bottom: 60px;
+}
+
+.branding-contact {
+  text-align: center;
+  background-color: #357a6673;
+  padding: 60px 20px;
+}
+
+.branding-contact h2 {
+  margin-bottom: 10px;
+}
+
+.branding-contact button {
+  margin-top: 20px;
+  background-color: #43937D;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.branding-contact button:hover {
+  background-color: #357a66;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal-form button {
+  background-color: #673ab7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-form button:hover {
+  background-color: #5e35b1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

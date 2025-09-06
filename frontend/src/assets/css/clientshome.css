@@ -1,0 +1,173 @@
+.clients-section {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.clients-heading {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #b50318;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.clients-logos {
+    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.clients-logos img {
+  max-width: 160px; /* increased from 120px */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.client1{
+  width: 160px;   /* increased from 120px */
+  height: 120px;  /* increased from 100px */
+}
+
+.client2{
+  width: 100px;   /* increased from 120px */
+  height: 100px;  /* increased from 100px */
+}
+
+.client3{
+  width: 150px;   /* increased from 120px */
+  height: 140px;  /* increased from 100px */
+}
+
+.clients-logos img:hover {
+  transform: scale(1.05); /* slight hover zoom */
+}
+
+.fivesec-grid {
+  display: grid;
+  align-items: start; /* keeps boxes top-aligned */
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px; /* controls the width of the entire grid */
+  justify-content: center; /* centers the grid in the parent */
+}
+
+.feature-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-box .desc {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.feature-box .desc.expanded {
+  max-height: 1000px;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.learn-more {
+  background-color:  #43937D;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.learn-more:hover {
+  background-color: #e91e63;
+}
+
+.show-more-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.show-more-btn {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.show-more-btn:hover {
+  background-color: #43937D;
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+
+/* Medium screens (tablets, 768px - 1024px) */
+@media (max-width: 1024px) {
+  .fivesec-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .clients-logos {
+    gap: 30px;
+  }
+
+  .clients-logos img {
+    max-width: 120px;
+  }
+
+  .clients-heading {
+    font-size: 36px;
+  }
+}
+
+/* Small screens (mobiles, up to 767px) */
+@media (max-width: 767px) {
+  .fivesec-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .clients-heading {
+    font-size: 28px;
+  }
+
+  .clients-logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .client1,
+  .client2,
+  .client3 {
+    width: 80px;
+    height: auto;
+  }
+
+  .feature-box {
+    padding: 16px;
+  }
+
+  .learn-more,
+  .show-more-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
