@@ -24,7 +24,7 @@ import ChatBotComponent from "./components/ChatBotComponent";
 import logo from './assets/image/logo/LOGO 3.jpg';
 
 // WhatsApp floating button import
-import { FloatingWhatsApp } from '@carlos8a/react-whatsapp-floating-button';
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 
 const App: React.FC = () => {
@@ -34,13 +34,15 @@ const App: React.FC = () => {
       <ChatBotComponent />
       {/* WhatsApp floating chat button */}
       <FloatingWhatsApp
-        phoneNumber="919843099624"                     // Replace with your WhatsApp number in international format
-        accountName="Support Team"                     // Your business or support name
-        avatar={logo}                         // Optional: path to avatar image in public folder
-        initialMessageByServer="Hi, how can I assist you?" // Initial greeting text
-        statusMessage="Available"                      // Status below name
-        // tooltipText="Need help? Chat with us!"         // Tooltip on hover
-        allowEsc={true}                                // Allows closing the chat with ESC
+      phoneNumber="+919843099624"        // WhatsApp number in international format
+      accountName="Support Team"         // Business/support name
+      avatar={logo}                      // Optional avatar image
+      chatMessage="Hi, how can I assist you?" // Initial greeting message
+      // status="Available"                 // Status below name
+      allowEsc                        // Allows closing with ESC
+      allowClickAway                  // Closes chat when clicking outside
+      notification                    // Shows notification badge
+      notificationSound               // Plays sound when chat opens
       />
       <Routes>
         <Route path="/" element={
