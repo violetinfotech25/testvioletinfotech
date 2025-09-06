@@ -12,6 +12,7 @@ const Digitalmarketingpg = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
   const [expandedArticles, setExpandedArticles] = useState<boolean[]>([]);
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   
   const articleData = [
     {
@@ -90,7 +91,7 @@ const Digitalmarketingpg = () => {
     const message = formData.get("message") as string;
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/digitalmarketingcontact/", {
+      const response = await fetch(`${API_URL}/digitalmarketingcontact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

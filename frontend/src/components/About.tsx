@@ -11,6 +11,7 @@ import teamImg from '../assets/image/about/image - 4.png';
 import coreServicesImg from '../assets/image/about/image - 6.jpg';
 
 const About = () => {
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -42,7 +43,7 @@ const About = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/aboutcontact/', {
+      const response = await fetch(`${API_URL}/aboutcontact/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

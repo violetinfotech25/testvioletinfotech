@@ -70,6 +70,7 @@ const ContentMarketing: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -94,7 +95,7 @@ const ContentMarketing: React.FC = () => {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/contentmarketingcontact/", {
+    const response = await fetch(`${API_URL}/contentmarketingcontact/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

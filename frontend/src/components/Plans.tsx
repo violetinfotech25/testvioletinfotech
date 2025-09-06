@@ -116,6 +116,7 @@ const Plans: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('');
   const [showModal, setShowModal] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<{ category: string; title: string } | null>(null);
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
   const headerOffset = 100;
 
@@ -159,7 +160,7 @@ const Plans: React.FC = () => {
 };
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/plancontact/', {
+      const response = await fetch(`${API_URL}/plancontact/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

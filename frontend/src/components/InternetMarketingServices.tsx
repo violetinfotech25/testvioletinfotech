@@ -47,6 +47,7 @@ const InternetMarketingPage: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState('');
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -73,7 +74,7 @@ const InternetMarketingPage: React.FC = () => {
   };
 
   try {
-    const response = await fetch('http://127.0.0.1:8000/internetmarketingcontact/', {
+    const response = await fetch(`${API_URL}/internetmarketingcontact/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

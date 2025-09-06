@@ -3,6 +3,7 @@ import Footerend from '../components/Footer';
 import '../assets/css/Contact.css';
 
 const Contact: React.FC = () => {
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +25,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/contactuspg/', {
+      const response = await fetch(`${API_URL}/contactuspg/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

@@ -10,6 +10,7 @@ import Image2 from '../assets/image/web/image2.png';
 import Image3 from '../assets/image/web/image3.png';
 
 const Webdesign = () => {
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -29,7 +30,7 @@ const Webdesign = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/webcontact/', {
+      const response = await fetch(`${API_URL}/webcontact/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

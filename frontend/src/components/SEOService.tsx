@@ -22,6 +22,7 @@ import Footer from './Footer';
 
 
 const SEOService: React.FC = () => {
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   useEffect(() => {
     AOS.init({ duration: 400 });
   }, []);
@@ -178,7 +179,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   };
 
   try {
-    const response = await fetch('http://localhost:8000/soecontact/', {
+    const response = await fetch(`${API_URL}/soecontact/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
