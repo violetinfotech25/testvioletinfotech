@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import '../assets/css/Plans.css';
+import { useState, useEffect } from 'react';
+import '../assets/css/plans.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footerend from '../components/Footer';
