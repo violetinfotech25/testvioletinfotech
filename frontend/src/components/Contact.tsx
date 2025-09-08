@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Footerend from '../components/Footer';
-import '../assets/css/Contact.css';
+import '../assets/css/contact.css';
 
 const Contact: React.FC = () => {
   const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
