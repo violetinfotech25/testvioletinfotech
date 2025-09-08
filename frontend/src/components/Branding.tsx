@@ -33,7 +33,6 @@ interface Section {
 }
 
 const Branding: React.FC = () => {
-  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);

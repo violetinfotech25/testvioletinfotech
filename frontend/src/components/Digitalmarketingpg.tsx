@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footerend from '../components/Footer';
 import '../assets/css/digitalmarketingmain.css';
 import image1 from '../assets/image/digital marketing/pic-1.png';
@@ -8,59 +8,10 @@ import image3 from '../assets/image/digital marketing/pic-3.png';
 import image4 from '../assets/image/digital marketing/pic-4.png';
 
 const Digitalmarketingpg = () => {
-  const location = useLocation();
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
-  const [expandedArticles, setExpandedArticles] = useState<boolean[]>([]);
   const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   
-  const articleData = [
-    {
-      img: "https://www.mctimothyassociates.com/wp-content/uploads/2024/03/Advanced-Digital-Marketing-Management-Course.jpg",
-      title: "Advertising vs. Marketing: What’s the Real Difference?",
-      content: "Marketing is the overall strategy used to promote a brand, product, or service, encompassing everything from market research to branding and customer engagement. Advertising, on the other hand, is just one component of marketing—it's the act of promoting a product through paid channels like TV, social media, or print. While marketing focuses on long-term brand building and customer relationships, advertising is more about short-term visibility and driving immediate sales. In simple terms, marketing creates the plan; advertising executes it. Understanding both is crucial to building a successful business strategy."
-    },
-    {
-      img: "https://learn.g2.com/hubfs/marketingstrategies.jpg",
-      title: "4 Creative Advertising Ideas to Elevate Your Brand",
-      content: "Supercharge your next campaign with innovative ad strategies designed to boost engagement, visibility, and results."
-    },
-    {
-      img: "https://lirp.cdn-website.com/43c3ee7c/dms3rep/multi/opt/Branding-vs-Marketing-1230-640w.jpg",
-      title: "Branding vs. Marketing: Why Both Matter",
-      content: "Understand how branding shapes perception while marketing drives action—and why your business needs both."
-    },
-    {
-      img: "https://irp.cdn-website.com/43c3ee7c/dms3rep/multi/What-is-a-CTA-1200.jpg",
-      title: "What Is a CTA? Master the Art of Persuasion",
-      content: "Learn what makes a great call-to-action, why CTAs matter, and how they can dramatically improve your conversion rates."
-    },
-    {
-      img: "https://adoric.com/blog/wp-content/uploads/2022/02/10-Tips-to-Boost-Brand-Loyalty-2.jpg",
-      title: "5 Powerful Ways to Build Brand Loyalty",
-      content: "Brand loyalty goes beyond satisfaction. Discover how emotional connections can drive long-term customer retention and advocacy."
-    },
-    {
-      img: "https://lirp.cdn-website.com/43c3ee7c/dms3rep/multi/opt/Avoid-Facebook-Mistakes-1230-1920w.jpg",
-      title: "5 Costly Facebook Ad Mistakes (and How to Avoid Them)",
-      content: "Struggling with your Facebook Ads ROI? You might be making one of these common mistakes. Learn how to fix them fast."
-    }
-  ];
-
-  useEffect(() => {
-    // Initialize expandedArticles with false values
-    setExpandedArticles(new Array(articleData.length).fill(false));
-
-    // Handle section scroll based on hash
-    if (location.hash) {
-      const sectionId = location.hash.replace('#', '');
-      setTimeout(() => {
-        const section = document.getElementById(sectionId);
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
-    }
-  }, [location]);
-
   const openModal = (title: string) => {
     setModalTitle(title);
     setShowModal(true);
@@ -70,11 +21,11 @@ const Digitalmarketingpg = () => {
     setShowModal(false);
   };
 
-  const toggleArticle = (index: number) => {
-    const updated = [...expandedArticles];
-    updated[index] = !updated[index];
-    setExpandedArticles(updated);
-  };
+  // const toggleArticle = (index: number) => {
+  //   const updated = [...expandedArticles];
+  //   updated[index] = !updated[index];
+  //   setExpandedArticles(updated);
+  // };
 
   const handleFormSubmit = async (
     e: React.FormEvent<HTMLFormElement>,

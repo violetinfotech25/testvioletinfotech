@@ -15,7 +15,6 @@ import {
   FaTrophy,
   FaFileAlt,
   FaCogs,
-  FaLightbulb,
   FaCheckCircle,
   FaLaptopCode,
   FaHeadset,

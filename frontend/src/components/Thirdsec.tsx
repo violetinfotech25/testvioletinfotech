@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import video from '../assets/video/vd1.mp4'
 import '../App.css'

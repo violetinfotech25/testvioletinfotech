@@ -136,7 +136,7 @@ const [formData, setFormData] = useState({
   date: '',
 });
 
-const today = new Date().toISOString().split('T')[0];
+// const today = new Date().toISOString().split('T')[0];
 
 const getNextDates = () => {
   const days = [];
